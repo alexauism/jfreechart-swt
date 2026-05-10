@@ -2,7 +2,7 @@
  * JFreeChart-SWT : SWT extensions for JFreeChart
  * ==============================================
  *
- * (C) Copyright 2000-2021, by Object Refinery Limited and Contributors.
+ * (C) Copyright 2000-2021, by David Gilbert and Contributors.
  *
  * Project Info:  https://github.com/jfree/jfreechart-swt
  *
@@ -27,9 +27,9 @@
  * ---------------------
  * SWTTimeSeriesDemo.java
  * ---------------------
- * (C) Copyright 2006-2021, by Object Refinery Limited and Contributors.
+ * (C) Copyright 2006-2021, by David Gilbert and Contributors.
  *
- * Original Author:  David Gilbert (for Object Refinery Limited);
+ * Original Author:  David Gilbert;
  * Contributor(s):   Henry Proudhon (henry.proudhon AT ensmp.fr);
  * 
  */
@@ -173,6 +173,8 @@ public class SWTTimeSeriesDemo1 {
         shell.setLayout(new FillLayout());
         shell.setText("Time series demo for jfreechart running with SWT");
         ChartComposite frame = new ChartComposite(shell, SWT.NONE, chart, true);
+        frame.setSelectionColor(display.getSystemColor(SWT.COLOR_RED));
+        frame.setFillZoomRectangle(true);
         frame.setDisplayToolTips(true);
         frame.setHorizontalAxisTrace(false);
         frame.setVerticalAxisTrace(false);
